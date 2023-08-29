@@ -1,0 +1,13 @@
+/* 
+display:flex|inline-flex
+flex-direction:row/column-> thay đổi phương hướng main axis
+flex-wrap:nowrap/wrap/wrap-reverse-> sắp xếp các flex item
+flex-basis:<length>
+justify-content:flex-start/flex-end/center/space-between/space-around-> căn theo chiều main axis
+align-content:flex-start/flex-end/center-> căn theo chiều cross axis 
+flex-grow:<number>->main size
+flex-shrink:<number>->cross size
+order:<number>-> trật tự để sắp xếp flex item
+flex-flow
+flex
+ */
