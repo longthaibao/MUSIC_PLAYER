@@ -11,3 +11,9 @@ order:<number>-> trật tự để sắp xếp flex item
 flex-flow
 flex
  */
+.btn{
+display: inline-block;
+background-color: transparent;
+border: none;
+}
+
