@@ -1,19 +1,45 @@
-/* 
-display:flex|inline-flex
-flex-direction:row/column-> thay đổi phương hướng main axis
-flex-wrap:nowrap/wrap/wrap-reverse-> sắp xếp các flex item
-flex-basis:<length>
-justify-content:flex-start/flex-end/center/space-between/space-around-> căn theo chiều main axis
-align-content:flex-start/flex-end/center-> căn theo chiều cross axis 
-flex-grow:<number>->main size
-flex-shrink:<number>->cross size
-order:<number>-> trật tự để sắp xếp flex item
-flex-flow
-flex
- */
-.btn{
-display: inline-block;
-background-color: transparent;
-border: none;
+body{
+    background-color: rgb(213, 213, 213);
 }
-
+.header{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    font-size: 20px;
+    margin-top: 50px;
+}
+.header1{
+    width: 70px;
+    height: 4px;
+    background-color: rgb(26, 121, 121);
+    margin: auto;
+    margin-bottom: 40px;
+}
+.navigation{
+    display: flex;
+    list-style-type: none;
+    justify-content:space-around;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+    color: rgb(82, 56, 56);
+    margin-bottom: 50px;
+}
+.hocweb{
+    background-color: white;
+    display: flex;
+    padding: 10px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.box{
+    background-color: rgb(146, 231, 146);
+    width: calc(30%);
+    height: 300px;
+    text-align:center;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 25px;
+}
