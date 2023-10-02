@@ -1,86 +1,98 @@
 <!DOCTYPE html>
-<!-- Một trang web chỉ có 1 thẻ html -->
-<!-- Một số tag thông dụng
-1: h1 -> h6 heading
-2: p -> paragraph
-3: img 
-4: a -> đưa bạn tới liên kết nào đó
-5: ul, li -> sử dụng khi hiển thị dưới dạng danh sách(unorder list,list)
-6: table -> bao gom tag <thead> va <tbody>
-7: input-> nhập text, dấu tick
-8: button
-9: div->các khối bao quanh -->
-
-<!-- PRIORITY 
-1 INTERNAL,EXTERNAL
-2 INLINE 1000
-3 ID(#) 100
-4 CLASS(.) 10
-5 TAG 1
-6 UNIVERSAL SELECTOR(*) AND INHERITED
--->
-<html>
+<html lang="en">
 
 <head>
-    <!-- Tiêu đề cho trang web -->
-    <title>
-        Truong dai hoc bach khoa
-    </title>
-    <!-- cú pháp để sử dụng tiêngs việt ở phần thân body -->
-    <meta charset="utf-8">
-    <!-- <style>
-        h1 {
-            color: aqua;
-        }
-    </style> -->
-    <link rel="stylesheet" href="main.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SPOTIFY</title>
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+    crossorigin="anonymous" />
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <div class="header"></div>
-    <div class="box">Box1</div>
-    <div class="box2">Box2</div>
-    <div>
-        <input name="bob" type="checkbox">
-        <h1>Truong dai hoc bach khoa</h1>
-        <button id="first">dang ki</button>
-        <h2>Hoc vu</h2>
-        <p>xin chao</p>
+  <div class="player">
+    <!-- Dashboard -->
+    <div class="dashboard">
+      <!-- Header -->
+      <header>
+        <h4>Now playing:</h4>
+        <h2>String 57th & 9th</h2>
+      </header>
+
+      <!-- CD -->
+      <div class="cd">
+        <div class="cd-thumb" style="background-image: url('https://i.ytimg.com/vi/jTLhQf5KJSc/maxresdefault.jpg')">
+        </div>
+      </div>
+
+      <!-- Control -->
+      <div class="control">
+        <div class="btn btn-repeat">
+          <i class="fas fa-redo"></i>
+        </div>
+        <div class="btn btn-prev">
+          <i class="fas fa-step-backward"></i>
+        </div>
+        <div class="btn btn-toggle-play">
+          <i class="fas fa-pause icon-pause"></i>
+          <i class="fas fa-play icon-play"></i>
+        </div>
+        <div class="btn btn-next">
+          <i class="fas fa-step-forward"></i>
+        </div>
+        <div class="btn btn-random">
+          <i class="fas fa-random"></i>
+        </div>
+      </div>
+
+      <input id="progress" class="progress" type="range" value="0" step="1" min="0" max="100">
+
+      <audio id="audio" src=""></audio>
     </div>
-    <img src="" alt="">
-    <a href="https://www.w3schools.com/html/html_basic.asp">Toi trang hoc lap trinh HTML</a>
-    <ul>
-        <li>1 ne</li>
-        <li>2 ne</li>
-        <li>3 ne</li>
-    </ul>
-    <table>
-        <thead>
-            <th>Stt</th>
-            <th>Name</th>
-            <th>mssv</th>
-        </thead>
-        <tbody>
-            <tr>
-                <td>1</td>
-                <td>Bon</td>
-                <td>2113946</td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>Hoc</td>
-                <td>2113443</td>
-            </tr>
-        </tbody>
-    </table>
+
+    <!-- Playlist -->
+    <div class="playlist">
+      <div class="song">
+        <div class="thumb" style="background-image: url('https://i.ytimg.com/vi/jTLhQf5KJSc/maxresdefault.jpg')">
+        </div>
+        <div class="body">
+          <h3 class="title">Music name</h3>
+          <p class="author">Singer</p>
+        </div>
+        <div class="option">
+          <i class="fas fa-ellipsis-h"></i>
+        </div>
+      </div>
+      <div class="song">
+        <div class="thumb" style="background-image: url('https://i.ytimg.com/vi/jTLhQf5KJSc/maxresdefault.jpg')">
+        </div>
+        <div class="body">
+          <h3 class="title">Music name</h3>
+          <p class="author">Singer</p>
+        </div>
+        <div class="option">
+          <i class="fas fa-ellipsis-h"></i>
+        </div>
+      </div>
+      <div class="song">
+        <div class="thumb" style="background-image: url('https://i.ytimg.com/vi/jTLhQf5KJSc/maxresdefault.jpg')">
+        </div>
+        <div class="body">
+          <h3 class="title">Music name</h3>
+          <p class="author">Singer</p>
+        </div>
+        <div class="option">
+          <i class="fas fa-ellipsis-h"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="./main.js"></script>
+  <!-- Design from: https://static.collectui.com/shots/3671744/musicloud-revolutionary-app-for-music-streaming-large -->
 </body>
 
 </html>
-<!-- CSS pseudo class -->
-<!-- 
-    :root
-    :hover
-    :active
-    :first-child
-    :last-child
- -->
